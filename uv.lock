@@ -246,7 +246,7 @@ wheels = [
 ]
 
 [[package]]
-name = "nta-mcp"
+name = "ireland-nta-mcp"
 version = "0.2.0"
 source = { virtual = "." }
 dependencies = [

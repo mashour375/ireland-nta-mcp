@@ -1,5 +1,5 @@
 [project]
-name = "nta-mcp"
+name = "ireland-nta-mcp"
 version = "0.0.1"
 description = "A Model Context Protocol server that interfaces with Ireland's NTA API"
 readme = "README.md"
