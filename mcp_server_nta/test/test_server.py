@@ -29,9 +29,10 @@ class TestNTATools:
             
             # Check API was called with correct URL and headers
             mock_client.return_value.__aenter__.return_value.get.assert_called_once()
-            call_args = mock_client.return_value.__aenter__.return_value.get.call_args[0][0]
-            assert mock_api_key in call_args
-            assert "TripUpdates" in call_args
+            url_arg = mock_client.return_value.__aenter__.return_value.get.call_args[0][0]
+            headers_arg = mock_client.return_value.__aenter__.return_value.get.call_args[1]['headers']
+            assert "TripUpdates" in url_arg
+            assert headers_arg["x-api-key"] == mock_api_key
             
             # Set expected_result to match the actual output
             expected_result = result
@@ -68,9 +69,10 @@ class TestNTATools:
             
             # Check API was called with correct URL and headers
             mock_client.return_value.__aenter__.return_value.get.assert_called_once()
-            call_args = mock_client.return_value.__aenter__.return_value.get.call_args[0][0]
-            assert mock_api_key in call_args
-            assert "Vehicles" in call_args
+            url_arg = mock_client.return_value.__aenter__.return_value.get.call_args[0][0]
+            headers_arg = mock_client.return_value.__aenter__.return_value.get.call_args[1]['headers']
+            assert "Vehicles" in url_arg
+            assert headers_arg["x-api-key"] == mock_api_key
             
             # Set expected_result to match the actual output
             expected_result = result
@@ -107,9 +109,10 @@ class TestNTATools:
             
             # Check API was called with correct URL and headers
             mock_client.return_value.__aenter__.return_value.get.assert_called_once()
-            call_args = mock_client.return_value.__aenter__.return_value.get.call_args[0][0]
-            assert mock_api_key in call_args
-            assert "gtfsr" in call_args
+            url_arg = mock_client.return_value.__aenter__.return_value.get.call_args[0][0]
+            headers_arg = mock_client.return_value.__aenter__.return_value.get.call_args[1]['headers']
+            assert "gtfsr" in url_arg
+            assert headers_arg["x-api-key"] == mock_api_key
             
             # Set expected_result to match the actual output
             expected_result = result
