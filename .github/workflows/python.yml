@@ -71,7 +71,7 @@ jobs:
             - name: Upload artifacts
               uses: actions/upload-artifact@v4
               with:
-                  name: dist-mcp_server_nta
+                  name: dist_mcp_server_nta
                   path: ./dist/
 
     publish:
